@@ -1146,7 +1146,7 @@ label.error {
   cursor: pointer;
   transition: all 0.2s ease-in;
 }
-@media (max-width: 1030px) {
+@media (max-width: 899px) {
   .nav-login {
     display: none;
   }
