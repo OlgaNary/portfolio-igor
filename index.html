@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Tutor</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicons/apple-touch-icon.png"
+    />
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container">
+        <div class="nav-row">
+          <a href="./index.html" class="nav-logo">
+            <img src="./img/nav/logo1.png" alt="Логотип" />
+            <span>Code Tutor</span>
+          </a>
+
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a
+                href="./index.html"
+                class="nav-list__link nav-list__item--active"
+                >Обо мне</a
+              >
+            </li>
+            <li class="nav-list__item">
+              <a href="#projects" class="nav-list__link">Проекты</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="./knowledge.html" class="nav-list__link">База знаний</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#contacts" class="nav-list__link">Контакты</a>
+            </li>
+          </ul>
+          <a href="#" class="nav-login">
+            <svg class="icon icon--user">
+              <use href="./img/svgsprite/sprite.symbol.svg#user"></use>
+            </svg>
+            <span>Вход</span>
+          </a>
+          <button class="dark-mode-btn">
+            <img
+              src="./img/nav/sun.svg"
+              alt="Light mode"
+              class="dark-mode-btn__icon"
+            />
+            <img
+              src="./img/nav/moon.svg"
+              alt="Dark mode"
+              class="dark-mode-btn__icon"
+            />
+          </button>
+          <button class="mobile-nav-btn" id="mobile-nav-btn">
+            <div class="nav-icon"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="./index.html" class="nav-list__link nav-list__item--active"
+        >Обо мне</a
+      >
+      <a href="#projects" class="nav-list__link">Проекты</a>
+
+      <a href="./knowledge.html" class="nav-list__link">База знаний</a>
+
+      <a href="#contacts" class="nav-list__link">Контакты</a>
+
+      <a href="#" class="mobile__nav-login">
+        <svg class="icon icon--user">
+          <use href="./img/svgsprite/sprite.symbol.svg#user"></use>
+        </svg>
+        <span>Вход</span>
+      </a>
+    </div>
+    <div class="nav-icon"></div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="header__left">
+            <h1 class="header__title">
+              Приветствую, меня зовут Игорь,<br />
+              <span>я&#160;преподаю программирование.</span>
+            </h1>
+            <p class="header__desc">Моя аудитория: от&#160;7 до&#160;60 лет.</p>
+            <p class="header__desc">
+              Основной акцент делаю на&#160;<span
+                >JavaScript и&#160;Python.</span
+              >
+            </p>
+            <p class="header__desc">
+              По&#160;вашему желанию могу обучить верстке на&#160;HTML+CSS,
+              а&#160;также научу создавать сайты на&#160;различных CMC.
+            </p>
+            <p class="header__desc">
+              Предлагаю ознакомиться
+              <a href="#projects">с&#160;учебными проектами моих учеников.</a>
+            </p>
+          </div>
+          <div class="header__right">
+            <img
+              class="header__img"
+              src="./img/header/coder4.png"
+              alt="Фото с автором"
+            />
+          </div>
+        </div>
+        <!-- <div class="header__row">
+      <div class="logo">ВебКадеми</div>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="active">Главная</a></li>
+          <li><a href="docs.html">Документация</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-nav-btn">
+        <div class="nav-icon"></div>
+      </button>
+    </div> -->
+      </div>
+    </header>
+
+    <section class="timeline" id="timeline">
+      <div class="container">
+        <div class="timeline__title">
+          <h2 class="h2 grad-border">Как я&#160;работаю</h2>
+        </div>
+        <div class="timeline-wrapper">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-item__title">
+              <div class="h4 grad-border">Оцениваю уровень подготовки</div>
+            </div>
+            <p>
+              Провожу первичное собеседование с&#160;учеником. Оцениваю знания
+              и&#160;навыки, потребности и&#160;ожидания.
+            </p>
+          </div>
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-item__title">
+              <div class="h4 grad-border">Расписание занятий</div>
+            </div>
+            <p>
+              Совместно с&#160;учеником составляем расписание занятий
+              и&#160;обговариваем удобный формат обучения.
+            </p>
+          </div>
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-item__title">
+              <div class="h4 grad-border">План обучения</div>
+            </div>
+            <p>
+              В&#160;зависимости от&#160;потребностей и&#160;уровня подготовки
+              ученика составляю индивидуальный план обучения и&#160;критерии
+              конечного результата.
+            </p>
+          </div>
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-item__title">
+              <div class="h4 grad-border">От&#160;теории к&#160;практике</div>
+            </div>
+            <p>
+              Все теоретические знания тщательно прорабатываем и&#160;закрепляем
+              практическими заданиями.
+            </p>
+          </div>
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-item__title">
+              <div class="h4 grad-border">Подготовка к&#160;собеседованию</div>
+            </div>
+            <p>
+              Если стоит такая задача, готовлю ученика к&#160;успешному
+              прохождению собеседования на&#160;позицию джуна.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="projects">
+      <div class="container">
+        <div class="headling">
+          <h2 id="projects" class="headling-title h2">Проекты учеников</h2>
+          <h3 class="h3">Выбрать проект</h3>
+        </div>
+        <div class="chip_wrapper">
+          <button data-tab="all" class="chip chip_active">Все</button>
+          <button data-tab="html+css" class="chip">HTML + CSS</button>
+          <!-- <button data-tab="css" class="chip">CSS</button> -->
+          <button data-tab="javascript" class="chip">JavaScript</button>
+          <button data-tab="python" class="chip">Python</button>
+        </div>
+
+        <div class="courses_wrapper">
+          <!-- Проект 12. Часы на JavaScript  -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover12.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d12-clock"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover12.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">Часы на&#160;JavaScript</div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2023</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d12-clock"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 12.  -->
+
+          <!-- Проект 01. Банковский депозитный калькулятор на JavaScript  -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover01.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d01-bank-calculator"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover01.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Банковский депозитный калькулятор на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d01-bank-calculator"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 01.  -->
+
+          <!-- Проект 02. Решение системы линейных уравнений -->
+          <div data-tab-value="python" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover02.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d02-system-linear-equations"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover02.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Решение системы линейных уравнений на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d02-system-linear-equations"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 02.  -->
+
+          <!-- Проект 03. Калькулятор для подсчета площади сектора на JavaScript -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover03.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d03-sector-area"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover03.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Калькулятор для подсчета площади сектора на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d03-sector-area"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 03.  -->
+
+          <!-- Проект 04. Таймер обратного отсчета -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover04.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d04-timer"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover04.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Таймер обратного отсчета на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d04-timer"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 04.  -->
+
+          <!-- Проект 05. Случайный победитель -->
+          <div data-tab-value="python" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover05.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d05-winner"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover05.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Случайный победитель на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d05-winner"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 05.  -->
+
+          <!-- Проект 06. Расчёт площади круга -->
+          <div data-tab-value="python" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover06.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d06-circle-area"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover06.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Расчёт площади круга на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d06-circle-area"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 06.  -->
+
+          <!-- Проект 07. Часы -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover07.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d07-clock"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover07.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">Часы на&#160;JavaScript</div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d07-clock"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 07.  -->
+
+          <!-- Проект 08. Слайдер -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover08.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d08-slider"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover08.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">Слайдер на&#160;JavaScript</div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d08-slider"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 08.  -->
+
+          <!-- Проект 09. Расчёт площади треугольника по координатам трёх точек -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover09.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d09-area-triangle-3-point"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover09.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Расчёт площади треугольника по&#160;координатам трёх точек
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d09-area-triangle-3-point"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 09.  -->
+
+          <!-- Проект 10. Калькулятор для решения линейного уравнения -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover10.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d10-equationsolver"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover10.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Калькулятор для решения линейного уравнения на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d10-equationsolver"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 10.  -->
+
+          <!-- Проект 11. Калькулятор для решения квадратного уравнения на JavaScript -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover11.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d11-quadratic-equation"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover11.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Калькулятор для решения квадратного уравнения
+                  на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d11-quadratic-equation"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 11.  -->
+
+          <!-- Проект 13. Калькулятор на JavaScript -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover11.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d13-calculator"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover13.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Калькулятор на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d13-calculator"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 13.  -->
+
+          <!-- Проект 14. Программа для расчета скидки на покупки на JavaScript -->
+          <div data-tab-value="javascript" class="course-card">
+            <div class="course-card__cover">
+              <!-- <img src="./images/cover11.png" alt="Изображение проекта" /> -->
+              <!-- Изм.1 -->
+              <a
+                href="https://matcodemaster.web.app/daniel/d14-discount-calculation"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover14.png"
+                    alt="Изображение проекта"
+                  />
+                </div>
+              </a>
+              <!-- Изм. 1 -->
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Программа для расчета скидки на&#160;покупки
+                  на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d14-discount-calculation"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 14.  -->
+
+          <!-- Проект 15. Современный калькулятор -->
+          <div data-tab-value="html+css" class="course-card">
+            <div class="course-card__cover">
+              <a
+                href="https://matcodemaster.web.app/daniel/d15-modern-calculator"
+                target="_blank"
+              >
+                <div class="course-card__cover">
+                  <img
+                    src="./img/projects/cover15.png"
+                    alt="Изображение проекта 15"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Современный калькулятор на&#160;HTML
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">HTML + CSS</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d15-modern-calculator"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 15.  -->
+
+          <!-- Проект 16. Калькулятор мер длины на JavaScript -->
+          <div data-tab-value="html+css" class="course-card">
+            <!-- Картинка 16-->
+            <a
+              href="https://matcodemaster.web.app/daniel/d16-length-converter/"
+              target="_blank"
+            >
+              <div class="course-card__cover">
+                <img
+                  src="./img/projects/cover16.png"
+                  alt="Изображение проекта"
+                />
+              </div>
+            </a>
+            <!-- Картинка ^^^ -->
+
+            <div class="course-card__body">
+              <div>
+                <div class="course-card__title">
+                  Калькулятор мер длины на&#160;JavaScript
+                </div>
+                <div class="course-card__author">Daniel</div>
+              </div>
+              <div class="course-card__tags">
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="course-card__footer">
+              <div>2024</div>
+              <a
+                href="https://matcodemaster.web.app/daniel/d16-length-converter/"
+                class="button button_primary"
+                target="_blank"
+                >Подробнее</a
+              >
+            </div>
+          </div>
+          <!-- Проект 16. ^^^  -->
+
+          <!-- Место для добавления следующего проекта ^^^ -->
+        </div>
+      </div>
+    </div>
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <div id="contacts" class="contacts-title">
+          <h2 class="h2 grad-border">Контакты</h2>
+        </div>
+        <div class="contacts-row">
+          <div
+            class="contacts-row__info"
+            data-aos="flip-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <div class="contacts-row__desc">
+              <p>
+                Если вы&#160;хотите освоить востребованную IT-специальность,
+                подготовиться к&#160;собеседованию, или ваш ребенок интересуется
+                программированием, и&#160;ему нужен толковый
+                репетитор&#160;&#8212; напишите мне.
+              </p>
+            </div>
+            <div class="contacts-row__email">
+              <p>
+                <span>Email:</span>
+                <a href="mailto:olgasobina.web@yandex.ru" class="link"
+                  >codetutor@site</a
+                >
+              </p>
+              <!-- <li>
+            <span>Телефон</span>
+            <a href="tel:+79168237766" class="link">+7 (916) 823-77-66</a>
+          </li> -->
+            </div>
+            <div class="social-block">
+              <a
+                href="https://telegram.im/@olganaryzhnaya"
+                target="_blank"
+                class="social-block__item"
+                ><img src="./img/contacts/telegram.svg" alt="Telegram"
+              /></a>
+              <!-- <a href="#" class="social-block__item"
+              ><img src="./img/social/facebook.svg" alt="FB"
+            /></a> -->
+              <!-- <a href="#" class="social-block__item"
+              ><img src="./img/social/instagram.svg" alt="Instagram"
+            /></a> -->
+              <a
+                href="https://wa.me/+79168237766"
+                target="_blank"
+                class="social-block__item"
+                ><img src="./img/contacts/whatsapp.svg" alt="Whatsapp"
+              /></a>
+              <a
+                href="viber://chat?number= [+79168237766]"
+                target="_blank"
+                class="social-block__item"
+                ><img src="./img/contacts/viber.png" alt="Viber" />
+              </a>
+              <!-- <a
+              href="https://vk.com/olga_naryzhnaya"
+              target="_blank"
+              class="social-block__item"
+              ><img src="./img/social/vk.svg" alt="VK"
+            /></a> -->
+            </div>
+          </div>
+          <div
+            class="contacts-row__form"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+          >
+            <form action="#" class="contact-form">
+              <div class="form-item">
+                <span class="fake-placeholder">Ваш Email</span>
+                <input name="email" type="email" class="form-field email" />
+              </div>
+              <div class="form-item">
+                <span class="fake-placeholder">Сообщение</span>
+                <textarea name="message" class="form-field textarea"></textarea>
+              </div>
+              <div class="form-item">
+                <input type="submit" class="form-btn" value="Отправить" />
+              </div>
+            </form>
+            <div id="answer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <main class="docs">
+      <section>
+        <div class="container">
+          <h1 class="title-1">Gulp сборка для верстки сайтов</h1>
+          <p>Понятная Gulp сборка которая ускорит твою верстку в разы.</p>
+          <p>
+            Документация по возможностям с примерами использования
+            <a href="./docs.html">здесь</a>.
+          </p>
+        </div>
+      </section>
+    </main> -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__copyright">
+          <a href="./index.html" class="footer-logo">
+            <img src="./img/nav/logo.png" alt="Логотип" />
+          </a>
+          <p>&#169; 2024 Все права защищены</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./../libs/validete-form/jquery-3.0.0.min.js"></script>
+    <script src="./../libs/validete-form/jquery.validate.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/index.bundle.js"></script>
+  </body>
+</html>
