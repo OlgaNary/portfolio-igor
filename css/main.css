@@ -847,16 +847,19 @@ label.error {
 }
 .header__desc span,
 .header__desc a {
-  /* background: linear-gradient(93.33deg, #d77be6 9.26%, #be63e6 42.32%, #6c38cc 104.58%); */
-  /* background-clip: text; */
-  /* color: transparent; */
-  color: #b82ae7;
-  font-weight: 700;
-}
-.header__desc a:hover {
   background: linear-gradient(93.33deg, #d77be6 9.26%, #be63e6 42.32%, #6c38cc 104.58%);
   background-clip: text;
-  color: transparent;
+  color: transparent;  
+  font-weight: 700;
+}
+@media (max-width: 899px) {
+  .header__desc span,
+  .header__desc a {
+  color: #b82ae7;
+  }  
+}
+.header__desc a:hover {
+  color: #6c38cc;
 }
 
 .header__desc span:focus,
