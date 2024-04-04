@@ -856,6 +856,7 @@ label.error {
   .header__desc span,
   .header__desc a {
   color: #b82ae7;
+  background-color: none;
   }  
 }
 .header__desc a:hover {
